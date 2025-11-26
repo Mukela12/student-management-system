@@ -52,6 +52,7 @@ export default {
         'slide-up': 'slideUp 0.3s ease-out',
         'scale-in': 'scaleIn 0.2s ease-out',
         'bounce-gentle': 'bounceGentle 2s infinite',
+        'float': 'float 4s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -69,6 +70,10 @@ export default {
         bounceGentle: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-5px)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)', opacity: '0.6' },
+          '50%': { transform: 'translateY(-20px)', opacity: '0.3' },
         },
       },
     },

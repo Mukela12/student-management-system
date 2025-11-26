@@ -77,10 +77,51 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-primary-100/30 flex items-center justify-center p-4">
+      {/* Background Grid Pattern */}
+      <div className="absolute inset-0 overflow-hidden">
+        <svg
+          className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-primary-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern
+              id="degreedesk-pattern"
+              width={200}
+              height={200}
+              x="50%"
+              y={-1}
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M.5 200V.5H200" fill="none" />
+              <circle cx="100" cy="100" r="50" fill="none" strokeWidth="0.5" opacity="0.3" />
+              <circle cx="50" cy="50" r="25" fill="none" strokeWidth="0.3" opacity="0.2" />
+              <circle cx="150" cy="150" r="25" fill="none" strokeWidth="0.3" opacity="0.2" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" strokeWidth={0} fill="url(#degreedesk-pattern)" />
+        </svg>
+      </div>
+
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-200/20 rounded-full blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-300/20 rounded-full blur-3xl" />
+      </div>
+
+      {/* Floating Animated Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary-400 rounded-full opacity-60 animate-float"
+          style={{ animationDelay: '0s', animationDuration: '4s' }}
+        />
+        <div
+          className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary-500 rounded-full opacity-40 animate-float"
+          style={{ animationDelay: '2s', animationDuration: '6s' }}
+        />
+        <div
+          className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-primary-300 rounded-full opacity-50 animate-float"
+          style={{ animationDelay: '1s', animationDuration: '5s' }}
+        />
       </div>
 
       <div className="w-full max-w-md relative z-10">
@@ -96,7 +137,7 @@ export default function Login() {
         </div>
 
         {/* Login Card */}
-        <Card variant="glass" className="animate-slide-up" padding="lg">
+        <Card variant="glass" className="animate-slide-up backdrop-blur-xl bg-white/80 border border-white/20" padding="lg">
           <form onSubmit={handleSubmit} className="space-y-6">
             <Input
               label="Email Address"
