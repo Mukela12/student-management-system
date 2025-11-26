@@ -98,7 +98,7 @@ export default function FinanceReconciliation() {
   const pendingCount = mockReconciliationData.filter(r => r.status === 'pending').length;
   const totalDiscrepancy = mockReconciliationData
     .filter(r => r.status === 'discrepancy')
-    .reduce((sum, r) => sum + r.discrepancy, 0);
+    .reduce((sum, r) => sum + (r.discrepancy ?? 0), 0);
 
   const handleReconcile = (id: string) => {
     console.log('Reconciling:', id);
