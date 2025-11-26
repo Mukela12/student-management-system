@@ -1,0 +1,26 @@
+{
+  "name": "DegreeDesk - University Management System",
+  "short_name": "DegreeDesk",
+  "description": "Comprehensive university portal for students, lecturers, administrators, and finance staff",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dvj7ayoot/image/upload/v1764113274/UNICoup_-_Logo_yhtgmd.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://res.cloudinary.com/dvj7ayoot/image/upload/v1764113274/UNICoup_-_Logo_yhtgmd.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "screenshots": []
+}
